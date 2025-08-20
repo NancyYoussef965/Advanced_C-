@@ -119,12 +119,35 @@ namespace MyApp
             #endregion
 
             #region Q6
-            string s = "[()]{})";
-            Console.WriteLine(Helper.IsBalanced(s)? "The tring is balanced." : "The string is not balanced.");
-           
+            //string s = "[()]{})";
+            //Console.WriteLine(Helper.IsBalanced(s)? "The tring is balanced." : "The string is not balanced.");
+
 
 
             #endregion
+
+
+
+            #region Q7
+
+            int[] arr = { 1, 2, 3, 4, 1, 2, 6, 7, 7 };
+ int[] DistinctArray = Helper.RemoveDuplicates
+                (arr);
+            foreach (int Darr in
+                DistinctArray)
+        Console.WriteLine(Darr);
+
+
+            #endregion
+
+
+
+
+
+
+
+
+
 
         }
     }

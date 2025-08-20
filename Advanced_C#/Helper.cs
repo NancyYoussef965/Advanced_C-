@@ -80,4 +80,18 @@ namespace Advanced_C_
             }
             return stack.Count == 0;
         }
+
+
+        public static int[] RemoveDuplicates(int[] arr)
+        {
+            return  arr
+                .Distinct().ToArray();
+        }
+
+
+
+
+
+
+
     } }
