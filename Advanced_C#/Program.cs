@@ -130,12 +130,12 @@ namespace MyApp
 
             #region Q7
 
-            int[] arr = { 1, 2, 3, 4, 1, 2, 6, 7, 7 };
- int[] DistinctArray = Helper.RemoveDuplicates
-                (arr);
-            foreach (int Darr in
-                DistinctArray)
-        Console.WriteLine(Darr);
+            //           int[] arr = { 1, 2, 3, 4, 1, 2, 6, 7, 7 };
+            //int[] DistinctArray = Helper.RemoveDuplicates
+            //               (arr);
+            //           foreach (int Darr in
+            //               DistinctArray)
+            //       Console.WriteLine(Darr);
 
 
             #endregion
@@ -143,7 +143,20 @@ namespace MyApp
 
 
 
+            #region Q8
+            ArrayList numbers = new ArrayList() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
+            Console.WriteLine("Before: ");
+            foreach (var n in numbers)
+                Console.Write(n + " ");
+
+            numbers.RemoveAll(x => (int)x % 2 != 0);
+
+            Console.WriteLine("\nAfter removing odds: ");
+            foreach (var n in numbers)
+                Console.Write(n + " ");
+
+            #endregion
 
 
 

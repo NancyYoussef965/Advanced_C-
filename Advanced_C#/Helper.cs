@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -89,7 +90,14 @@ namespace Advanced_C_
         }
 
 
-
+        public static void RemoveAll(this ArrayList list, Predicate<object> match)
+        {
+            for (int i = list.Count - 1; i >= 0; i--)
+            {
+                if (match(list[i]))
+                    list.RemoveAt(i);
+            }
+        }
 
 
 
