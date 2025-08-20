@@ -116,7 +116,7 @@ namespace Advanced_C_
 
 
 
-        static List<int> GetIntersection(int[] arr1, int[] arr2)
+      public  static List<int> GetIntersection(int[] arr1, int[] arr2)
         {
             Dictionary<int, int> freq = new Dictionary<int, int>();
             List<int> intersection = new List<int>();
@@ -140,6 +140,28 @@ namespace Advanced_C_
 
             return intersection;
         }
+
+
+    public    static List<int> FindContiguousSubArray(List<int> arr, int targetSum)
+        {
+            for (int i = 0; i < arr.Count; i++)
+            {
+                int currentSum = 0;
+                for (int j = i; j < arr.Count; j++)
+                {
+                    currentSum += arr[j];
+                    if (currentSum == targetSum)
+                    {
+                        return arr.GetRange(i, j - i + 1);
+                    }
+                }
+            }
+            return new List<int>(); 
+        }
+
+
+
+
     }
 
 
