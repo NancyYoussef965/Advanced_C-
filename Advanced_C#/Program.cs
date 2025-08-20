@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Advanced_C_;
 
 namespace MyApp
 {
@@ -45,19 +46,19 @@ namespace MyApp
 
 
         #region Q2
-        static void ReverseArrayList(ArrayList list)
-        {
-            int i = 0;
-            int j = list.Count - 1;
-            while (i < j)
-            {
-                object temp = list[i];
-                list[i] = list[j];
-                list[j] = temp;
-                i++;
-                j--;
-            }
-        }
+        //static void ReverseArrayList(ArrayList list)
+        //{
+        //    int i = 0;
+        //    int j = list.Count - 1;
+        //    while (i < j)
+        //    {
+        //        object temp = list[i];
+        //        list[i] = list[j];
+        //        list[j] = temp;
+        //        i++;
+        //        j--;
+        //    }
+        //}
 
 
         #endregion
@@ -78,13 +79,29 @@ namespace MyApp
 
             #region Q2
 
-            ArrayList numbers = new ArrayList() { 1, 2, 3, 4, 5 };
+            //ArrayList numbers = new ArrayList() { 1, 2, 3, 4, 5 };
 
-            Console.WriteLine("Before Reversing: " + string.Join(", ", numbers.ToArray()));
-            ReverseArrayList(numbers);
-            Console.WriteLine("After Reversing:  " + string.Join(", ", numbers.ToArray()));
+            //Console.WriteLine("Before Reversing: " + string.Join(", ", numbers.ToArray()));
+            //ReverseArrayList(numbers);
+            //Console.WriteLine("After Reversing:  " + string.Join(", ", numbers.ToArray()));
 
             #endregion
+
+            #region Q3
+            int[] arr = { 11, 5, 3 };
+            int[] queries = { 1, 5, 13 };
+            foreach ( int q in queries)
+            {
+                Console.WriteLine(Helper.CountsGreaterThenX
+                    (arr, q));
+            }
+
+
+            #endregion
+
+
+
+
         }
     }
 }
