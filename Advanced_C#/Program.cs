@@ -144,22 +144,35 @@ namespace MyApp
 
 
             #region Q8
-            ArrayList numbers = new ArrayList() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            //ArrayList numbers = new ArrayList() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-            Console.WriteLine("Before: ");
-            foreach (var n in numbers)
-                Console.Write(n + " ");
+            //Console.WriteLine("Before: ");
+            //foreach (var n in numbers)
+            //    Console.Write(n + " ");
 
-            numbers.RemoveAll(x => (int)x % 2 != 0);
+            //numbers.RemoveAll(x => (int)x % 2 != 0);
 
-            Console.WriteLine("\nAfter removing odds: ");
-            foreach (var n in numbers)
-                Console.Write(n + " ");
+            //Console.WriteLine("\nAfter removing odds: ");
+            //foreach (var n in numbers)
+            //    Console.Write(n + " ");
 
             #endregion
 
 
+            #region Q9
+            Queue GenericQueue = new Queue();
+            GenericQueue.Enqueue(1);
+            GenericQueue.Enqueue("apple");
 
+            GenericQueue.Enqueue(5.7);
+            foreach (var item in GenericQueue)
+            {
+                Console.WriteLine(item);
+            }
+
+
+
+            #endregion
 
 
         }
