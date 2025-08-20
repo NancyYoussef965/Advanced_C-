@@ -50,4 +50,34 @@ namespace Advanced_C_
                 queue.Enqueue(stack.Pop());
             }
         }
+
+
+
+
+
+        public static bool IsBalanced(string str)
+        {
+            Stack<char> stack = new Stack<char>();
+       Dictionary<char, char> brackets = new Dictionary<char, char>
+            {
+                { '(', ')' },
+                { '{', '}' },
+                { '[', ']' }
+            };
+            foreach (char c in str)
+            {
+                if (brackets.ContainsKey(c))
+                {
+                    stack.Push(c);
+                }
+                else if (brackets.ContainsValue(c))
+                {
+                    if (stack.Count == 0 || brackets[stack.Pop()] != c)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return stack.Count == 0;
+        }
     } }

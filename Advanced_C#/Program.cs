@@ -111,10 +111,18 @@ namespace MyApp
 
             #region Q5
 
-            Queue<int> q1 = new Queue<int>(new int[] { 1, 2, 3 });
-            Helper.ReserveQueue (q1);
-            Console.
-                WriteLine("Reversed Queue: " + string.Join(", ", q1.ToArray()));
+            //Queue<int> q1 = new Queue<int>(new int[] { 1, 2, 3 });
+            //Helper.ReserveQueue (q1);
+            //Console.
+            //    WriteLine("Reversed Queue: " + string.Join(", ", q1.ToArray()));
+
+            #endregion
+
+            #region Q6
+            string s = "[()]{})";
+            Console.WriteLine(Helper.IsBalanced(s)? "The tring is balanced." : "The string is not balanced.");
+           
+
 
             #endregion
 
