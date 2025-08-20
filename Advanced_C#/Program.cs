@@ -101,14 +101,22 @@ namespace MyApp
 
 
             #region Q4
-            int[] arr = { 1, 2, 3, 2, 1 };
-            if (Helper.IsPalindrome
-               (arr))
-                Console.WriteLine("The array is a palindrome.");
-            else
-                Console.WriteLine("The array is not a palindrome.");
+            //int[] arr = { 1, 2, 3, 2, 1 };
+            //if (Helper.IsPalindrome
+            //   (arr))
+            //    Console.WriteLine("The array is a palindrome.");
+            //else
+            //    Console.WriteLine("The array is not a palindrome.");
             #endregion
 
+            #region Q5
+
+            Queue<int> q1 = new Queue<int>(new int[] { 1, 2, 3 });
+            Helper.ReserveQueue (q1);
+            Console.
+                WriteLine("Reversed Queue: " + string.Join(", ", q1.ToArray()));
+
+            #endregion
 
         }
     }

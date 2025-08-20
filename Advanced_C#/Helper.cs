@@ -35,5 +35,19 @@ namespace Advanced_C_
             }
             return true;
         }
-    }
-    }
+
+
+    
+    public static void ReserveQueue<T>(Queue<T> queue)
+        {
+            Stack<T> stack = new Stack<T>();
+            while (queue.Count > 0)
+            {
+                stack.Push(queue.Dequeue());
+            }
+            while (stack.Count > 0)
+            {
+                queue.Enqueue(stack.Pop());
+            }
+        }
+    } }
