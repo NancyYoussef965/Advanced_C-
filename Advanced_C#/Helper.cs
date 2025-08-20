@@ -101,8 +101,7 @@ namespace Advanced_C_
 
 
 
-        public static
-            void SearchInStack(Stack<int> stack, int value)
+        public static  void SearchInStack(Stack<int> stack, int value)
         {
             if (stack.Contains(value))
             {
@@ -114,5 +113,39 @@ namespace Advanced_C_
             }
         }
 
-    } 
-}
+
+
+
+        static List<int> GetIntersection(int[] arr1, int[] arr2)
+        {
+            Dictionary<int, int> freq = new Dictionary<int, int>();
+            List<int> intersection = new List<int>();
+
+            foreach (int num in arr1)
+            {
+                if (freq.ContainsKey(num))
+                    freq[num]++;
+                else
+                    freq[num] = 1;
+            }
+
+            foreach (int num in arr2)
+            {
+                if (freq.ContainsKey(num) && freq[num] > 0)
+                {
+                    intersection.Add(num);
+                    freq[num]--;
+                }
+            }
+
+            return intersection;
+        }
+    }
+
+
+
+
+
+
+
+} 

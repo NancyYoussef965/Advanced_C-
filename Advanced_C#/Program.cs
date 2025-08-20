@@ -187,7 +187,31 @@ namespace MyApp
 
 
 
+            #region Q11
+            int[] arr1 = { 1, 2, 3, 4, 4 };
+            int[] arr2 = { 10, 4, 4 };
 
+            // Call Helper.GetIntersection using reflection since it's private
+            var method = typeof(Helper).GetMethod("GetIntersection", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
+            var result = (List<int>)method.Invoke(null, new object[] { arr1, arr2 });
+
+            Console.WriteLine("[" + string.Join(",", result) + "]");
+            #endregion
+
+            #region Q12
+
+
+
+
+
+            #endregion
+
+            #region Q13
+
+
+
+
+            #endregion
 
 
 
