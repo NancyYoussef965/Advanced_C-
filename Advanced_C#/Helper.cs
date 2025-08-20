@@ -20,5 +20,20 @@ namespace Advanced_C_
             }
             return count;
         }
+
+        static public bool IsPalindrome(int[] arr)
+        {
+            int i = 0, j = arr.Length - 1;
+            while (i < j)
+            {
+                if (arr[i] != arr[j])
+                {
+                    return false;
+                }
+                i++;
+                j--;
+            }
+            return true;
+        }
     }
     }

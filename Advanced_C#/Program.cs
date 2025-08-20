@@ -88,18 +88,26 @@ namespace MyApp
             #endregion
 
             #region Q3
-            int[] arr = { 11, 5, 3 };
-            int[] queries = { 1, 5, 13 };
-            foreach ( int q in queries)
-            {
-                Console.WriteLine(Helper.CountsGreaterThenX
-                    (arr, q));
-            }
+            //int[] arr = { 11, 5, 3 };
+            //int[] queries = { 1, 5, 13 };
+            //foreach ( int q in queries)
+            //{
+            //    Console.WriteLine(Helper.CountsGreaterThenX
+            //        (arr, q));
+            //}
 
 
             #endregion
 
 
+            #region Q4
+            int[] arr = { 1, 2, 3, 2, 1 };
+            if (Helper.IsPalindrome
+               (arr))
+                Console.WriteLine("The array is a palindrome.");
+            else
+                Console.WriteLine("The array is not a palindrome.");
+            #endregion
 
 
         }
