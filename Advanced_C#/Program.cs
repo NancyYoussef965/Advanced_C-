@@ -160,19 +160,39 @@ namespace MyApp
 
 
             #region Q9
-            Queue GenericQueue = new Queue();
-            GenericQueue.Enqueue(1);
-            GenericQueue.Enqueue("apple");
+            //Queue GenericQueue = new Queue();
+            //GenericQueue.Enqueue(1);
+            //GenericQueue.Enqueue("apple");
 
-            GenericQueue.Enqueue(5.7);
-            foreach (var item in GenericQueue)
-            {
-                Console.WriteLine(item);
-            }
+            //GenericQueue.Enqueue(5.7);
+            //foreach (var item in GenericQueue)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
 
 
             #endregion
+
+
+            #region Q10
+            
+      Stack <int> stack = new Stack<int>( new int[] { 10,20, 30,40 ,50 });
+
+            Helper.SearchInStack(stack, 30);
+
+
+
+            #endregion
+
+
+
+
+
+
+
+
+
 
 
         }

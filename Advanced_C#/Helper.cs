@@ -101,6 +101,18 @@ namespace Advanced_C_
 
 
 
+        public static
+            void SearchInStack(Stack<int> stack, int value)
+        {
+            if (stack.Contains(value))
+            {
+                Console.WriteLine($"Value {value} found in the stack.");
+            }
+            else
+            {
+                Console.WriteLine($"Value {value} not found in the stack.");
+            }
+        }
 
     } 
 }
