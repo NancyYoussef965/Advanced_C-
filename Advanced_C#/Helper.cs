@@ -161,8 +161,34 @@ namespace Advanced_C_
 
 
 
+        public static Queue<int> ReverseFirstKElements(Queue<int> q, int k)
+        {
+            if (k <= 0 || k > q.Count)
+                return q;
 
-    }
+            Stack<int> stack = new Stack<int>();
+
+            for (int i = 0; i < k; i++)
+            {
+                stack.Push(q.Dequeue());
+            }
+
+            Queue<int> newQueue = new Queue<int>();
+            while (stack.Count > 0)
+            {
+                newQueue.Enqueue(stack.Pop());
+            }
+
+            while (q.Count > 0)
+            {
+                newQueue.Enqueue(q.Dequeue());
+            }
+
+            return newQueue;
+        }
+
+
+}
 
 
 

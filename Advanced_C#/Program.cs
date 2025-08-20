@@ -208,6 +208,20 @@ namespace MyApp
             #endregion
 
             #region Q13
+            Queue<int> q = new Queue<int>();
+            q.Enqueue(10);
+            q.Enqueue(20);
+            q.Enqueue(30);
+            q.Enqueue(40);
+            q.Enqueue(50);
+            q.Enqueue(60);
+            q.Enqueue(70);
+
+            int k = 4;
+
+            Queue<int> result = Helper.ReverseFirstKElements(q, k);
+
+            Console.WriteLine("[" + string.Join(", ", result) + "]");
 
 
 
